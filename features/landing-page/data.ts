@@ -11,15 +11,15 @@ export const images = {
 };
 
 export const pillars = [
-  ["Education & Skills", "Wakiso Schools Outreach", images.school, "School sponsorships, distribution of essential scholastic materials, and community vocational training programs designed to keep vulnerable children in school.", ["Direct scholastic kits & uniforms", "Girl-child educational advocacy", "Foundational literacy mentorship"], "rose"],
-  ["Health & Wellbeing", "Kampala Settlement Drive", images.food, "Primary health education, specialized nutrition support for teen mothers and infants, and clean water sanitation campaigns across vulnerable settlements.", ["Teen mother nutrition care packs", "Hygiene & clean drinking water", "Preventive health workshops"], "blue"],
-  ["Food Security", "Hoima Agro-Plots", images.farming, "Hands-on agricultural training, climate-smart seedling and input distribution, and communal farming plots to guarantee stable household sustenance.", ["High-yield seedling distribution", "Community urban gardening skills", "Household nutrition self-sufficiency"], "green"],
+  ["Education & Skills", "Wakiso Schools Outreach", "primary", "school", images.school, "School sponsorships, distribution of essential scholastic materials, and community vocational training programs designed to keep vulnerable children in school.", ["Direct scholastic kits & uniforms", "Girl-child educational advocacy", "Foundational literacy mentorship"], "blue"],
+  ["Health & Wellbeing", "Kampala Settlement Drive", "secondary", "health_and_safety", images.food, "Primary health education, specialized nutrition support for teen mothers and infants, and clean water sanitation campaigns across vulnerable settlements.", ["Teen mother nutrition care packs", "Hygiene & clean drinking water", "Preventive health workshops"], "blue"],
+  ["Food Security", "Hoima Agro-Plots", "tertiary", "eco", images.farming, "Hands-on agricultural training, climate-smart seedling and input distribution, and communal farming plots to guarantee stable household sustenance.", ["High-yield seedling distribution", "Community urban gardening skills", "Household nutrition self-sufficiency"], "green"],
 ] as const;
 
 export const trades = [
-  ["Carpentry & Joinery", "Trade Academy", "Nansana Hub • Active Cohort", "Trade Level 1", images.carpentry, "Youth master timber selection, structural joining, furniture construction, and tool maintenance, equipping them to launch micro-workshops."],
-  ["Tailoring & Garments", "Garment Craft", "Wakiso Pod • Teen Mothers", "6-Month Track", images.tailoring, "From sewing machine calibration to precision pattern cutting, young women and teen mothers gain viable apparel trade skills for steady daily income."],
-  ["Metal Welding", "Fabrication", "Kampala Arc Workshop", "Fabrication Track", images.welding, "Hands-on training in arc welding, metal safety, gate fabrication, and repair work opens immediate employment in Uganda's fast-growing construction sector."],
+  ["Carpentry & Joinery", "Trade Academy", "carpenter", "amber", "Nansana Hub • Active Cohort", "Trade Level 1", images.carpentry, "Youth master timber selection, structural joining, furniture construction, and tool maintenance, equipping them to launch micro-workshops."],
+  ["Tailoring & Garments", "Garment Craft", "styler", "purple", "Wakiso Pod • Teen Mothers", "6-Month Track", images.tailoring, "From sewing machine calibration to precision pattern cutting, young women and teen mothers gain viable apparel trade skills for steady daily income."],
+  ["Metal Welding", "Fabrication", "hardware", "blue", "Kampala Arc Workshop", "Fabrication Track", images.welding, "Hands-on training in arc welding, metal safety, gate fabrication, and repair work opens immediate employment in Uganda's fast-growing construction sector."],
 ] as const;
 
 export const districts = [

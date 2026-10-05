@@ -13,7 +13,7 @@ import { SiteFooter } from "./footer";
 
 export function LandingPage() {
   return (
-    <div className="min-h-screen bg-[var(--background)] text-[var(--foreground)]">
+    <div className="landing-page min-h-screen bg-[var(--background)] text-[var(--foreground)]">
       <SiteHeader />
       <main className="pt-20">
         <HeroSection />
