@@ -1,0 +1,15 @@
+import { Card } from "@/components/ui/card";
+import { districts } from "./data";
+import { MaterialIcon } from "./material-icon";
+import { SectionHeading } from "./section-heading";
+
+export function FieldReachSection() {
+  const metadata = [
+    ["hub", "HQ & Pods", "bg-[#e0f2fe] text-[#0284c7]", "verified", "text-[#0037b0]"],
+    ["location_city", "Active", "bg-emerald-100 text-emerald-600", "groups", "text-emerald-600"],
+    ["connecting_airports", "Frontline", "bg-amber-100 text-amber-600", "inventory_2", "text-amber-600"],
+    ["agriculture", "Agri-Zone", "bg-emerald-100 text-emerald-600", "eco", "text-emerald-600"],
+    ["water", "Lakeside", "bg-[#e0f2fe] text-[#0284c7]", "water_drop", "text-[#0284c7]"],
+  ] as const;
+  return <section className="w-full bg-[var(--surface)] py-16 lg:py-20"><div className="mx-auto max-w-[1200px] px-6"><div className="mb-12 flex flex-col justify-between gap-6 md:flex-row md:items-end"><SectionHeading eyebrow="Grassroots Footprint" title="Operational Field Reach Across Uganda"><p className="mt-3 max-w-xl text-slate-600">From our core coordination hub in Wakiso to rural frontline outposts, YDI reaches vulnerable youth where need is highest.</p></SectionHeading><span className="flex items-center gap-2 text-sm font-semibold text-slate-600"><MaterialIcon name="pin_drop" className="text-xl text-[#0284c7]" />14+ Verified Community Zones</span></div><div className="grid gap-4 sm:grid-cols-2 lg:grid-cols-5">{districts.map(([district, label, text, impact], index) => { const [icon, status, statusClass, impactIcon, impactClass] = metadata[index]; return <Card key={district} className="flex flex-col gap-3 rounded-2xl border border-[#c4c5d7]/30 bg-[#eaedff] p-5 shadow-none transition-all hover:border-[#0037b0] hover:shadow-md"><div className="flex items-center justify-between"><div className="grid size-10 place-items-center rounded-xl bg-[#e0f2fe] text-[#0284c7]"><MaterialIcon name={icon} className="text-xl" /></div><span className={`rounded-full px-2.5 py-0.5 text-[11px] font-bold ${statusClass}`}>{status}</span></div><span className="text-xs font-bold uppercase tracking-wider text-[#0284c7]">{label}</span><h4 className="text-[18px] font-semibold">{district}</h4><p className="text-[13px] leading-5 text-slate-600">{text}</p><div className={`mt-auto flex items-center gap-1.5 border-t border-[#c4c5d7]/20 pt-2 text-xs font-semibold ${impactClass}`}><MaterialIcon name={impactIcon} className="text-[15px]" />{impact}</div></Card>; })}</div></div></section>;
+}
