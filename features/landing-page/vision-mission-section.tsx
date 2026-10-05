@@ -52,9 +52,9 @@ const principles = [
 
 export function VisionMissionSection() {
   return (
-    <section id="about" className="relative w-full overflow-hidden bg-[var(--surface-muted)] py-16 lg:py-24">
+    <section id="about" className="relative w-full overflow-hidden border-y border-[#c4c5d7]/20 bg-[#f6f8fd] py-16 lg:py-24">
       <div className="relative z-10 mx-auto max-w-[1200px] px-6">
-        <div className="mx-auto mb-12 flex max-w-3xl flex-col items-center gap-3 text-center lg:mb-16">
+        <div className="mx-auto mb-12 flex max-w-3xl flex-col items-center gap-3 text-center lg:mb-14">
           <div className="inline-flex items-center gap-2 rounded-full bg-white px-4 py-1.5 text-xs font-bold tracking-wide text-[#0284c7] shadow-sm">
             <MaterialIcon name="auto_awesome" className="text-base text-amber-600" />
             Guiding Principles &amp; Purpose

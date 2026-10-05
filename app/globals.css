@@ -93,10 +93,6 @@ body {
   color: var(--foreground);
 }
 
-.landing-page [data-slot="card"] {
-  border-width: 0 !important;
-}
-
 * {
   border-color: var(--border);
 }
