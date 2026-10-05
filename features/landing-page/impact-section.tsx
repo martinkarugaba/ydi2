@@ -3,5 +3,61 @@ import { impactCards } from "./data";
 import { MaterialIcon } from "./material-icon";
 
 export function ImpactSection() {
-  return <section id="donate" className="w-full bg-[var(--surface-muted)] py-16 lg:py-20"><div className="mx-auto max-w-[1200px] px-6"><div className="mx-auto mb-12 max-w-2xl text-center"><span className="text-xs font-bold uppercase tracking-widest text-[#0284c7]">Transparency &amp; Accountability</span><h2 className="mt-2 text-[28px] font-bold leading-9 tracking-tight">Tangible Impact Per Contribution</h2><p className="mt-3 text-slate-600">Every contribution is mapped directly to procurement and local artisan toolkits with zero speculative overhead.</p></div><div className="grid gap-6 md:grid-cols-3">{impactCards.map(([label, amount, currency, title, text, action], index) => <Card key={amount} className={`relative flex flex-col gap-4 rounded-3xl p-8 ${index === 1 ? "border-2 border-[#0284c7] shadow-lg" : "shadow-sm"}`}>{index === 1 && <span className="absolute -top-3.5 right-6 rounded-full bg-[#0284c7] px-3 py-1 text-xs font-semibold text-white">Most Critical Need</span>}<span className={`text-xs font-bold uppercase tracking-wider ${index === 1 ? "text-[#0284c7]" : "text-slate-500"}`}>{label}</span><div className="flex items-baseline gap-2"><b className="text-[32px] font-extrabold">{amount}</b><span className="text-xs text-slate-500">{currency}</span></div><h4 className="text-xl font-bold">{title}</h4><p className="text-sm leading-6 text-slate-600">{text}</p><a href="#donate" className={`mt-auto inline-flex items-center justify-center gap-2 rounded-full px-4 py-3 text-center text-sm font-semibold transition-transform hover:-translate-y-0.5 ${index === 1 ? "bg-gradient-to-r from-[#0284c7] to-[#2563eb] text-white" : "border bg-[var(--surface-blue)] text-[#0037b0]"}`}>{index === 1 && <MaterialIcon name="favorite" className="text-lg" filled />}{action}</a></Card>)}</div></div></section>;
+  return (
+    <section
+      id="donate"
+      className="w-full bg-[var(--surface-muted)] py-16 lg:py-20"
+    >
+      <div className="mx-auto max-w-[1200px] px-6">
+        <div className="mx-auto mb-12 max-w-2xl text-center">
+          <span className="text-xs font-bold uppercase tracking-widest text-[#0284c7]">
+            Transparency &amp; Accountability
+          </span>
+          <h2 className="mt-2 text-[28px] font-bold leading-9 tracking-tight">
+            Tangible Impact Per Contribution
+          </h2>
+          <p className="mt-3 text-slate-600">
+            Every contribution is mapped directly to procurement and local
+            artisan toolkits with zero speculative overhead.
+          </p>
+        </div>
+        <div className="grid gap-6 md:grid-cols-3">
+          {impactCards.map(
+            ([label, amount, currency, title, text, action], index) => (
+              <Card
+                key={amount}
+                className={`relative flex flex-col gap-4 rounded-3xl p-8 ${index === 1 ? "border-2 border-[#0284c7] shadow-lg" : "shadow-sm"}`}
+              >
+                {index === 1 && (
+                  <span className="absolute -top-3.5 right-6 rounded-full bg-[#0284c7] px-3 py-1 text-xs font-semibold text-white">
+                    Most Critical Need
+                  </span>
+                )}
+                <span
+                  className={`text-xs font-bold uppercase tracking-wider ${index === 1 ? "text-[#0284c7]" : "text-slate-500"}`}
+                >
+                  {label}
+                </span>
+                <div className="flex items-baseline gap-2">
+                  <b className="text-[32px] font-extrabold">{amount}</b>
+                  <span className="text-xs text-slate-500">{currency}</span>
+                </div>
+                <h4 className="text-xl font-bold">{title}</h4>
+                <p className="text-sm leading-6 text-slate-600">{text}</p>
+                <a
+                  href="#donate"
+                  className={`mt-auto inline-flex items-center justify-center gap-2 rounded-full px-4 py-3 text-center text-sm font-semibold transition-transform hover:-translate-y-0.5 ${index === 1 ? "bg-gradient-to-r from-[#0284c7] to-[#2563eb] text-white" : "border bg-[var(--surface-blue)] text-[#0037b0]"}`}
+                >
+                  {index === 1 && (
+                    <MaterialIcon name="favorite" className="text-lg" filled />
+                  )}
+                  {action}
+                </a>
+              </Card>
+            ),
+          )}
+        </div>
+      </div>
+    </section>
+  );
 }
