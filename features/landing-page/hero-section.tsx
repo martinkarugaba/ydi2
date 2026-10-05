@@ -1,3 +1,5 @@
+import Image from "next/image";
+
 import { Button } from "@/components/ui/button";
 import { Card } from "@/components/ui/card";
 import { images } from "./data";
@@ -65,13 +67,15 @@ export function HeroSection() {
             </Card>
           </div>
         </div>
-        <div className="relative overflow-hidden rounded-3xl shadow-2xl shadow-blue-900/10 lg:col-span-6">
+        <div className="relative h-[420px] overflow-hidden rounded-3xl shadow-2xl shadow-blue-900/10 sm:h-[480px] lg:col-span-6 lg:h-[520px]">
           <div className="absolute -right-8 -top-8 z-10 grid size-24 place-items-center rounded-full bg-[#fe932c] text-white shadow-lg">
             <MaterialIcon name="favorite" className="text-3xl" filled />
           </div>
-          <img
-            className="h-[420px] w-full object-cover object-center transition-transform duration-500 hover:scale-[1.02] sm:h-[480px] lg:h-[520px]"
+          <Image
+            className="object-cover object-center transition-transform duration-500 hover:scale-[1.02]"
             src={images.hero}
+            fill
+            sizes="(min-width: 1024px) 50vw, 100vw"
             alt="YDI Heart to Heart community group"
           />
           <div className="absolute inset-0 bg-gradient-to-t from-black/60 via-transparent to-transparent" />

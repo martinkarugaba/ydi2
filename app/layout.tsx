@@ -21,12 +21,6 @@ export default function RootLayout({ children }: LayoutProps<"/">) {
       lang="en"
       className={cn("h-full", "antialiased", jakarta.variable, "font-sans", inter.variable)}
     >
-      <head>
-        <link
-          rel="stylesheet"
-          href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:FILL,wght@0..1,100..700&display=swap"
-        />
-      </head>
       <body className="min-h-full">{children}</body>
     </html>
   );
